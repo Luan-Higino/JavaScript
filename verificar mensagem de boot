@@ -1,0 +1,19 @@
+// IMPORTANTE: As funções "gets" e "print" são acessíveis globalmente e têm as seguintes funcionalidades: 
+// - "gets": lê UMA linha com dados de entrada (input) do usuário;
+// - "print": imprime um texto de saída (output) e pula uma linha ("\n") automaticamente.
+
+// Lê o tipo de mensagem a ser contado ("BOT" ou "USER")
+const tipoMensagem = gets();
+let contador = 0;
+
+while (true) {
+  const mensagem = gets();
+  if (mensagem === "FIM") {
+    break;
+  }
+  if (mensagem.startsWith(tipoMensagem + ":")) {
+    contador++;
+  }
+}
+
+print(contador);
